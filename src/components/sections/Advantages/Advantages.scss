@@ -1,0 +1,16 @@
+.Advantages {
+  &_content {
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_item {
+    text-align: center;
+  }
+
+  &_image {
+    height: 200px;
+    margin-bottom: 80px;
+  }
+}

@@ -1,5 +1,26 @@
-.Subscription {
+.ContactInfo {
+  padding-bottom: 135px;
+
   &_content {
-    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 65px;
+  }
+
+  &_item {
+    &:not(:last-child) {
+      margin-bottom: 45px;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      color: #211a1e;
+    }
+
+    img {
+      height: 25px;
+      margin-left: 120px;
+    }
   }
 }

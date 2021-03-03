@@ -62,6 +62,9 @@ const Subscription = () => (
                 </section>
             </div>
         </Wrapper>
+        <div className="Subscription_footer">
+            <p>Термін дії абонементів не обмежений в часі</p>
+        </div>
     </section>
 );
 
