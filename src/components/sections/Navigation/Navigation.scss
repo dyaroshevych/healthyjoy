@@ -1,0 +1,43 @@
+// @import "../../../index.scss";
+
+.Navigation {
+  &_container {
+    padding: 10px 0;
+    background-color: #dec7ab;
+
+    .Wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &_logoContainer {
+    width: 100%;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  &_logo {
+    height: 120px;
+  }
+
+  &_list {
+    display: flex;
+
+    li:not(:last-of-type) {
+      margin-right: 30px;
+    }
+  }
+
+  &_link {
+    color: #211a1e;
+    font-size: 2.5rem;
+    font-weight: 500;
+    transition: color 0.5s ease;
+
+    &:hover {
+      color: #c3423f;
+    }
+  }
+}
