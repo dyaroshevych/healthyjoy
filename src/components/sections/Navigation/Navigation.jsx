@@ -36,7 +36,7 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className='Navigation'>
+    <nav className='Navigation' id='navigation'>
       <div className='Navigation_logoContainer'>
         <img className='Navigation_logo' src={logoSvg} alt='Healthy Joy' />
       </div>

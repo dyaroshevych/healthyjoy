@@ -1,0 +1,12 @@
+export { default as popup_1_1Jpg } from "./1_1.jpg";
+export { default as popup_1_2Jpg } from "./1_2.jpg";
+export { default as popup_1_3Jpg } from "./1_3.jpg";
+export { default as popup_2_1Jpg } from "./2_1.jpg";
+export { default as popup_2_2Jpg } from "./2_2.jpg";
+export { default as popup_2_3Jpg } from "./2_3.jpg";
+export { default as popup_3_1Jpg } from "./3_1.jpg";
+export { default as popup_3_2Jpg } from "./3_2.jpg";
+export { default as popup_3_3Jpg } from "./3_3.jpg";
+export { default as popup_4_1Jpg } from "./4_1.jpg";
+export { default as popup_4_2Jpg } from "./4_2.jpg";
+export { default as popup_4_3Jpg } from "./4_3.jpg";

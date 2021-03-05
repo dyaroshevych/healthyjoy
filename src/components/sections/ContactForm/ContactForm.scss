@@ -1,5 +1,38 @@
-.Subscription {
+.ContactForm {
   &_content {
-    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &_form {
+    width: 50%;
+    margin-top: 60px;
+  }
+
+  &_input {
+    display: block;
+    width: 100%;
+    padding: 25px 0;
+    background-color: transparent;
+    border: none;
+    border-top: 1px solid #211a1e;
+    border-bottom: 1px solid #211a1e;
+
+    &::placeholder {
+      color: #211a1e;
+    }
+
+    &:not(:first-of-type) {
+      transform: translateY(-1px);
+    }
+
+    &:last-of-type {
+      margin-bottom: 60px;
+    }
+  }
+
+  &_image {
+    width: 265px;
   }
 }

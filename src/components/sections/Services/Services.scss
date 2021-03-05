@@ -1,0 +1,129 @@
+.Services {
+  &_content {
+    margin-top: 80px;
+  }
+
+  &_slide {
+    margin: 0 15px;
+  }
+  &_slideImageContainer {
+    overflow: hidden;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+  }
+
+  &_slideImage {
+    min-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+
+  &_slideHeadingContainer {
+    padding: 23px 0;
+    width: 100%;
+    text-align: center;
+    background-color: #dec7ab;
+  }
+
+  &_popupSlideImages {
+    display: flex;
+    height: 100%;
+  }
+
+  &_popupSlideImageContainer {
+    position: relative;
+    width: 310px;
+    height: 300px;
+    overflow: hidden;
+
+    &--tall {
+      height: 600px;
+    }
+
+    img {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &_slider {
+    width: 860px;
+
+    .slick-prev,
+    .slick-next {
+      bottom: -72px;
+    }
+
+    .slick-prev {
+      left: 25px;
+    }
+
+    .slick-next {
+      right: 25px;
+    }
+
+    .slick-dots {
+      bottom: -75px;
+    }
+  }
+
+  &_popupSlider {
+    border-top: 50px solid #dec7ab;
+
+    .slick-prev,
+    .slick-next {
+      top: -35px;
+
+      &::before {
+        padding: 14px 45px;
+        background-color: #efece9;
+      }
+    }
+
+    .slick-prev {
+      left: 50px;
+    }
+
+    .slick-next {
+      left: 160px;
+    }
+  }
+
+  &_popupSlide {
+    display: flex;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &_popupSlideText {
+    width: 100%;
+    padding-left: 95px;
+    padding-right: 10px;
+    padding-top: 32px;
+  }
+
+  &_popupSlideList {
+    width: 100%;
+    padding-top: 28px;
+  }
+
+  &_popupSlideListItem {
+    display: flex;
+    justify-content: space-between;
+
+    &:not(:last-of-type) {
+      padding-bottom: 20px;
+    }
+
+    p:last-of-type {
+      font-weight: 500;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.Backdrop {
+  position: fixed;
+  cursor: pointer;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  animation: hideBackdrop 0.25s ease forwards;
+  transition: all 0.25s ease;
+
+  &[isvisible="true"] {
+    animation: showBackdrop 0.5s ease forwards;
+  }
+}
+
+@keyframes showBackdrop {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes hideBackdrop {
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
