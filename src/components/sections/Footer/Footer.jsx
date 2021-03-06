@@ -17,7 +17,7 @@ const Footer = () => (
         <p>
           <a
             className="Footer_link"
-            href="https://www.linkedin.com/in/bohdan-mykhayliv/"
+            href="https://www.linkedin.com/in/bmykhaylivvv/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -40,7 +40,7 @@ const Footer = () => (
         <p>
           <a
             className="Footer_link"
-            href="https://www.linkedin.com/in/bohdan-mykhayliv/"
+            href="https://www.linkedin.com/in/mariya-fenchyn-145b251a3/"
             target="_blank"
             rel="noopener noreferrer"
           >
