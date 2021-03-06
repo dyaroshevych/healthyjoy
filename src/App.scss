@@ -9,10 +9,11 @@ html {
 }
 
 body {
+  min-width: 1440px;
+  margin: auto;
   font-family: "Raleway", sans-serif;
   box-sizing: border-box;
   background-color: #efece9;
-  overflow-x: hidden;
 }
 
 section {

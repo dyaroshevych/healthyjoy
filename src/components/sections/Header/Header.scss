@@ -1,4 +1,7 @@
 .Header {
   background-color: #c4c4c4;
-  height: 625px;
+
+  &_video {
+    width: 100%;
+  }
 }

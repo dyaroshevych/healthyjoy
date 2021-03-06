@@ -1,0 +1,35 @@
+.Footer {
+  position: relative;
+  background-color: #dec7ab;
+  padding: 8px 12px;
+
+  &_content {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      width: 24px;
+    }
+  }
+
+  &_heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &_link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 280px;
+
+    color: #211a1e;
+    transition: color 0.25s ease;
+
+    &:hover {
+      color: #c3423f;
+    }
+  }
+}

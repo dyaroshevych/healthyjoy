@@ -3,3 +3,4 @@ export { default as logoSpinnerSvg } from "./logo-spinner.svg";
 export { default as aboutJpg } from "./about.jpg";
 export { default as contactSvg } from "./contact.svg";
 export { default as arrowSvg } from "./arrow.svg";
+export { default as headerVideoMp4 } from "./header-video.mp4";

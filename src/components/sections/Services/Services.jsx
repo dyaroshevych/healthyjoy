@@ -87,8 +87,12 @@ const PRICING = [
   },
 ];
 
-const ServicesPopupSlider = () => (
-  <Slider {...POPUP_SLIDER_SETTINGS} className="Services_popupSlider">
+const ServicesPopupSlider = ({ initialSlide }) => (
+  <Slider
+    {...POPUP_SLIDER_SETTINGS}
+    initialSlide={initialSlide}
+    className="Services_popupSlider"
+  >
     {PRICING.map(({ heading, img, text }) => (
       <div>
         <div className="Services_popupSlide">
@@ -124,6 +128,7 @@ const ServicesPopupSlider = () => (
 
 const Services = () => {
   const [modalVisible, setModalVisible] = useState(false);
+  const [initialSlide, setInitialSlide] = useState(0);
 
   return (
     <section className="Services" id="services">
@@ -131,7 +136,7 @@ const Services = () => {
         visible={modalVisible}
         toggleVisibility={() => setModalVisible(!modalVisible)}
       >
-        <ServicesPopupSlider />
+        <ServicesPopupSlider initialSlide={initialSlide} />
       </Modal>
       <Wrapper>
         <h2>
@@ -140,9 +145,12 @@ const Services = () => {
         <div className="Services_content">
           <Slider {...SLIDER_SETTINGS} className="Services_slider">
             <div>
-              <button
+              <div
                 className="Services_slide"
-                onClick={() => setModalVisible(!modalVisible)}
+                onClick={() => {
+                  setModalVisible(!modalVisible);
+                  setInitialSlide(0);
+                }}
               >
                 <div className="Services_slideImageContainer">
                   <img
@@ -154,12 +162,15 @@ const Services = () => {
                 <div className="Services_slideHeadingContainer">
                   <p>Масаж обличчя</p>
                 </div>
-              </button>
+              </div>
             </div>
             <div>
-              <button
+              <div
                 className="Services_slide"
-                onClick={() => setModalVisible(!modalVisible)}
+                onClick={() => {
+                  setModalVisible(!modalVisible);
+                  setInitialSlide(1);
+                }}
               >
                 <div className="Services_slideImageContainer">
                   <img
@@ -171,12 +182,15 @@ const Services = () => {
                 <div className="Services_slideHeadingContainer">
                   <p>Маски</p>
                 </div>
-              </button>
+              </div>
             </div>
             <div>
-              <button
+              <div
                 className="Services_slide"
-                onClick={() => setModalVisible(!modalVisible)}
+                onClick={() => {
+                  setModalVisible(!modalVisible);
+                  setInitialSlide(2);
+                }}
               >
                 <div className="Services_slideImageContainer">
                   <img
@@ -188,12 +202,15 @@ const Services = () => {
                 <div className="Services_slideHeadingContainer">
                   <p>Масаж спини</p>
                 </div>
-              </button>
+              </div>
             </div>
             <div>
-              <button
+              <div
                 className="Services_slide"
-                onClick={() => setModalVisible(!modalVisible)}
+                onClick={() => {
+                  setModalVisible(!modalVisible);
+                  setInitialSlide(3);
+                }}
               >
                 <div className="Services_slideImageContainer">
                   <img
@@ -205,7 +222,7 @@ const Services = () => {
                 <div className="Services_slideHeadingContainer">
                   <p>Натуральна косметика</p>
                 </div>
-              </button>
+              </div>
             </div>
           </Slider>
         </div>
