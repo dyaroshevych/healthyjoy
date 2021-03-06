@@ -13,7 +13,7 @@ const Footer = () => (
         Healthy Joy Ukraine {new Date().getFullYear()}
       </h4>
       <div>
-        <p>Developed by</p>
+        <h5>Developed by</h5>
         <p>
           <a
             className="Footer_link"
@@ -36,7 +36,7 @@ const Footer = () => (
         </p>
       </div>
       <div>
-        <p>Design by</p>
+        <h5>Design by</h5>
         <p>
           <a
             className="Footer_link"

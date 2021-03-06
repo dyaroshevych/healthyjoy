@@ -40,7 +40,7 @@ const SLIDER_SETTINGS = {
   customPaging: function (i) {
     return (
       <a>
-        <h5>{headings[i]}</h5>
+        <h5 className="Services_sliderDotLink">{headings[i]}</h5>
       </a>
     );
   },
@@ -114,8 +114,8 @@ const ServicesPopupSlider = ({ initialSlide }) => (
             <ul className="Services_popupSlideList">
               {text.map((text_item) => (
                 <li className="Services_popupSlideListItem">
-                  <p>{text_item[0]}</p>
-                  <p>{text_item[1]}</p>
+                  <h5>{text_item[0]}</h5>
+                  <h5>{text_item[1]}</h5>
                 </li>
               ))}
             </ul>

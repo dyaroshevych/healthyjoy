@@ -73,16 +73,28 @@
     }
   }
 
+  &_sliderDotLink {
+    transition: color 0.25s ease;
+
+    &:hover {
+      color: #c3423f;
+    }
+  }
+
   &_popupSlider {
     border-top: 50px solid #dec7ab;
 
     .slick-prev,
     .slick-next {
-      top: -35px;
+      top: -50px;
+      padding: 25px 55px;
+      background-color: #efece9;
 
       &::before {
-        padding: 14px 45px;
-        background-color: #efece9;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
     }
 
@@ -123,7 +135,7 @@
       padding-bottom: 20px;
     }
 
-    p:last-of-type {
+    h5:last-of-type {
       font-weight: 500;
     }
   }
