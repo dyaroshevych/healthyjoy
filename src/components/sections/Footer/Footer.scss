@@ -1,7 +1,7 @@
 .Footer {
   position: relative;
   background-color: #dec7ab;
-  padding: 8px 12px;
+  padding: 12px 0;
 
   &_content {
     display: flex;
@@ -23,7 +23,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 280px;
+    width: 230px;
 
     color: #211a1e;
     transition: color 0.25s ease;
@@ -31,5 +31,9 @@
     &:hover {
       color: #c3423f;
     }
+  }
+
+  h5:not(:last-of-type) {
+    margin-bottom: 3px;
   }
 }

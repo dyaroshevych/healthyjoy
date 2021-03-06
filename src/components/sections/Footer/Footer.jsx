@@ -14,7 +14,7 @@ const Footer = () => (
       </h4>
       <div>
         <h5>Developed by</h5>
-        <p>
+        <h5>
           <a
             className="Footer_link"
             href="https://www.linkedin.com/in/bmykhaylivvv/"
@@ -23,8 +23,8 @@ const Footer = () => (
           >
             Bohdan Mykhayliv <img src={linkedinSvg} alt="LinkedIn" />
           </a>
-        </p>
-        <p>
+        </h5>
+        <h5>
           <a
             className="Footer_link"
             href="https://www.linkedin.com/in/dyaroshevych/"
@@ -33,11 +33,11 @@ const Footer = () => (
           >
             Dmytro Yaroshevych <img src={linkedinSvg} alt="LinkedIn" />
           </a>
-        </p>
+        </h5>
       </div>
       <div>
         <h5>Design by</h5>
-        <p>
+        <h5>
           <a
             className="Footer_link"
             href="https://www.linkedin.com/in/mariya-fenchyn-145b251a3/"
@@ -46,7 +46,7 @@ const Footer = () => (
           >
             Mariya Fenchyn <img src={linkedinSvg} alt="LinkedIn" />
           </a>
-        </p>
+        </h5>
       </div>
     </Wrapper>
   </footer>
