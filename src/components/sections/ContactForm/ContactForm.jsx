@@ -8,24 +8,29 @@ import "./ContactForm.scss";
 
 const ACTION =
   "https://docs.google.com/forms/u/8/d/e/1FAIpQLSfolp3vrSdAKQQdWHoWPLeO-CrFzyll0Z1BvpAtatUxSbLQtw/formResponse";
+const startTime = new Date().getTime();
 
 const ContactForm = () => {
-  const [submitted, setSubmitted] = useState(false);
+  const [submitCount, setSubmitCount] = useState(0);
 
   return (
     <section className="ContactForm" id="contact-form">
       <Wrapper>
-        <h2>Онлайн запис</h2>
+        <h2>
+          Онлайн запис <img src={contactSvg} alt="" />
+        </h2>
         <div className="ContactForm_content">
-          {(!submitted && (
+          {((submitCount < 1 || new Date().getTime() - startTime < 3000) && (
             <>
               <iframe
                 title="hidden_iframe"
                 id="hidden_iframe"
                 name="hidden_iframe"
-                style={{ display: "none" }}
+                style={{ position: "absolute" }}
+                width="1"
+                height="1"
                 onLoad={() => {
-                  setSubmitted(true);
+                  setSubmitCount(submitCount + 1);
                 }}
               ></iframe>
               <form
@@ -39,6 +44,7 @@ const ContactForm = () => {
                   className="ContactForm_input"
                   name="entry.2081458265"
                   placeholder="Ім'я"
+                  onFocus={(e) => (e.target.placeholder = "Введіть своє ім'я")}
                 />
                 <input
                   className="ContactForm_input"

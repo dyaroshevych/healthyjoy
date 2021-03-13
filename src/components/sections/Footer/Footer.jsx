@@ -17,21 +17,21 @@ const Footer = () => (
         <h5>
           <a
             className="Footer_link"
-            href="https://www.linkedin.com/in/bmykhaylivvv/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Bohdan Mykhayliv <img src={linkedinSvg} alt="LinkedIn" />
-          </a>
-        </h5>
-        <h5>
-          <a
-            className="Footer_link"
             href="https://www.linkedin.com/in/dyaroshevych/"
             target="_blank"
             rel="noopener noreferrer"
           >
             Dmytro Yaroshevych <img src={linkedinSvg} alt="LinkedIn" />
+          </a>
+        </h5>
+        <h5>
+          <a
+            className="Footer_link"
+            href="https://www.linkedin.com/in/bmykhaylivvv/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Bohdan Mykhayliv <img src={linkedinSvg} alt="LinkedIn" />
           </a>
         </h5>
       </div>

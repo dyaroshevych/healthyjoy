@@ -1,3 +1,5 @@
+@import "../../../index.scss";
+
 .Modal {
   position: fixed;
   top: 50%;
@@ -12,8 +14,26 @@
   z-index: 3;
   transition: all 0.5s ease;
 
+  @include desktop-md {
+    width: 1000px;
+  }
+
   &_content {
     position: relative;
+    max-height: 650px;
+    overflow-y: hidden;
+
+    @include desktop-md {
+      max-height: 550px;
+    }
+
+    @include desktop-sm {
+      max-height: 450px;
+    }
+
+    @include mobile-lg {
+      max-height: 350px;
+    }
   }
 
   &_button {

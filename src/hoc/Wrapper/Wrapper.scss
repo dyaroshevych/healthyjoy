@@ -1,4 +1,14 @@
+@import "../../index.scss";
+
 .Wrapper {
   width: calc(100% - 200px);
   margin: 0 auto;
+
+  @include desktop-md {
+    width: calc(100% - 50px);
+  }
+
+  @include tablet-sm {
+    width: calc(100% - 20px);
+  }
 }

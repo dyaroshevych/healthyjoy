@@ -1,4 +1,18 @@
+@import "../../../index.scss";
+
 .ContactForm {
+  h2 > img {
+    display: none;
+
+    @include mobile-md {
+      display: block;
+    }
+
+    @include mobile-md {
+      display: none;
+    }
+  }
+
   &_content {
     display: flex;
     justify-content: space-between;
@@ -9,6 +23,14 @@
   &_form {
     width: 50%;
     margin-top: 60px;
+
+    @include mobile-lg {
+      width: 60%;
+    }
+
+    @include mobile-md {
+      width: 100%;
+    }
   }
 
   &_input {
@@ -44,5 +66,14 @@
 
   &_image {
     width: 265px;
+
+    @include mobile-lg {
+      width: 160px;
+      margin-left: 40px;
+    }
+
+    @include mobile-md {
+      display: none;
+    }
   }
 }

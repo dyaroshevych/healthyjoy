@@ -1,9 +1,13 @@
-// @import "../../../index.scss";
+@import "../../../index.scss";
 
 .Navigation {
   &_container {
     padding: 10px 0;
     background-color: #dec7ab;
+
+    @include tablet-lg {
+      display: none;
+    }
 
     .Wrapper {
       display: flex;
@@ -20,10 +24,23 @@
 
   &_logo {
     height: 120px;
+
+    @include desktop-sm {
+      height: 80px;
+    }
+
+    @include tablet-lg {
+      display: none;
+    }
   }
 
   &_list {
     display: flex;
+
+    @include tablet-lg {
+      flex-direction: column;
+      justify-content: center;
+    }
 
     li:not(:last-of-type) {
       margin-right: 30px;
@@ -38,6 +55,132 @@
 
     &:hover {
       color: #c3423f;
+    }
+  }
+
+  &_mobileMenu {
+    display: none;
+
+    @include tablet-lg {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 1rem;
+    }
+
+    &ToggleButtonLabel {
+      position: relative;
+      display: inline-block;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 5px;
+      background-color: #dec7ab;
+      box-shadow: 0 1px 6px -2px rgba(0, 0, 0, 0.5);
+      z-index: 4;
+      cursor: pointer;
+      transition: right 0.5s ease;
+
+      span {
+        &,
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          width: 2.5rem;
+          height: 1.5px;
+          background-color: #211a1e;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 5;
+          transition: all 0.25s ease;
+        }
+
+        &::before {
+          top: 8px;
+        }
+
+        &::after {
+          top: -6px;
+        }
+      }
+    }
+
+    &ToggleButtonInput {
+      display: none;
+
+      &[visible="true"] {
+        right: 22rem;
+
+        span {
+          background-color: transparent;
+
+          &::before {
+            transform: translate(-50%, -50%) rotate(135deg);
+            top: 0;
+          }
+
+          &::after {
+            transform: translate(-50%, -50%) rotate(45deg);
+            top: 0;
+          }
+        }
+      }
+    }
+
+    &Button {
+      display: inline-block;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 1px 6px -2px rgba(0, 0, 0, 0.5);
+      background-color: #dec7ab;
+      color: #211a1e;
+
+      p {
+        font-weight: 500;
+      }
+    }
+
+    &Logo {
+      display: none;
+
+      @include tablet-lg {
+        display: inline-block;
+        height: 7rem;
+        margin-left: 2rem;
+      }
+
+      @include mobile-md {
+        display: none;
+      }
+    }
+
+    &LeftSide {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &_mobileHiddenMenu {
+    transition: transform 1s ease;
+
+    &[visible="false"] {
+      transform: translateX(-110%);
+    }
+
+    .Navigation_list {
+      position: fixed;
+      z-index: 3;
+      min-width: 19rem;
+      padding: 20px 40px;
+      height: 100vh;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .Navigation_linkContainer:not(:last-of-type) {
+      margin-bottom: 20px;
+      margin-right: 0;
     }
   }
 }

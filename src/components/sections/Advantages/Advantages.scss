@@ -1,3 +1,5 @@
+@import "../../../index.scss";
+
 .Advantages {
   &_content {
     margin-top: 90px;
@@ -12,5 +14,9 @@
   &_image {
     height: 200px;
     margin-bottom: 80px;
+
+    @include desktop-md {
+      height: 150px;
+    }
   }
 }

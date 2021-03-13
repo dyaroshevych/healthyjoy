@@ -1,4 +1,16 @@
+@import "../../../index.scss";
+
 .Subscription {
+  @include desktop-md {
+    padding-top: 135px;
+  }
+
+  .Wrapper {
+    @include mobile-lg {
+      width: 100%;
+    }
+  }
+
   &_content {
     margin-top: 30px;
   }
@@ -6,22 +18,56 @@
   &_section {
     display: flex;
     justify-content: space-between;
-    padding-top: 50px;
+    margin-top: 50px;
+    padding: 0 !important;
 
-    &:nth-of-type(1) .Subscription_article {
-      background-color: rgba(222, 199, 171, 0.25);
+    @include mobile-lg {
+      height: fit-content;
+      align-items: center;
+
+      &:not(L:first-of-type) {
+        margin-top: 0;
+      }
     }
 
-    &:nth-of-type(2) .Subscription_article {
-      background-color: rgba(222, 199, 171, 0.5);
+    &:nth-of-type(1) {
+      .Subscription_article {
+        background-color: rgba(222, 199, 171, 0.25);
+      }
+
+      @include mobile-lg {
+        background-color: rgba(222, 199, 171, 0.25);
+      }
     }
 
-    &:nth-of-type(3) .Subscription_article {
-      background-color: rgba(222, 199, 171, 0.75);
+    &:nth-of-type(2) {
+      .Subscription_article {
+        background-color: rgba(222, 199, 171, 0.5);
+      }
+
+      @include mobile-lg {
+        background-color: rgba(222, 199, 171, 0.5);
+      }
     }
 
-    &:nth-of-type(4) .Subscription_article {
-      background-color: #dec7ab;
+    &:nth-of-type(3) {
+      .Subscription_article {
+        background-color: rgba(222, 199, 171, 0.75);
+      }
+
+      @include mobile-lg {
+        background-color: rgba(222, 199, 171, 0.75);
+      }
+    }
+
+    &:nth-of-type(4) {
+      .Subscription_article {
+        background-color: #dec7ab;
+      }
+
+      @include mobile-lg {
+        background-color: #dec7ab;
+      }
     }
   }
 
@@ -32,8 +78,31 @@
     width: 715px;
     height: 265px;
 
+    @include desktop-sm {
+      padding-top: 20px;
+      padding-left: 50px;
+      width: 570px;
+      height: 235px;
+    }
+
+    @include tablet-md {
+      padding-left: 15px;
+      width: 420px;
+      height: 200px;
+    }
+
+    @include mobile-lg {
+      padding-top: 10px;
+      width: unset;
+      background-color: transparent !important;
+    }
+
     h3 {
       margin-bottom: 50px;
+
+      @include tablet-md {
+        margin-bottom: 25px;
+      }
     }
   }
 
@@ -41,6 +110,26 @@
     overflow: hidden;
     width: 265px;
     height: 265px;
+
+    @include desktop-sm {
+      width: 235px;
+      height: 235px;
+    }
+
+    @include tablet-md {
+      width: 200px;
+      height: 200px;
+    }
+
+    @include mobile-lg {
+      width: 120px;
+      height: 120px;
+      margin: 10px;
+    }
+
+    @include mobile-md {
+      display: none;
+    }
   }
 
   &_image {

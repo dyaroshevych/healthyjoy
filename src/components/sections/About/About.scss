@@ -1,11 +1,26 @@
+@import "../../../index.scss";
+
 .About {
   border-top: 45px solid #dec7ab;
   padding-top: 90px;
+
+  @include tablet-md {
+    position: relative;
+    padding-top: 50px;
+  }
 
   &_content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include desktop-lg {
+      margin-top: 50px;
+    }
+
+    @include tablet-md {
+      margin-top: 370px;
+    }
 
     p:not(:last-child) {
       margin-bottom: 2.5rem;
@@ -19,6 +34,28 @@
     height: 550px;
     border: 25px solid #dec7ab;
     margin-left: 120px;
+
+    @include desktop-lg {
+      min-width: 400px;
+      height: 400px;
+      margin-left: 60px;
+    }
+
+    @include tablet-lg {
+      min-width: 300px;
+      height: 300px;
+      border: 10px solid #dec7ab;
+      margin-left: 30px;
+    }
+
+    @include tablet-md {
+      position: absolute;
+      top: 150px;
+      left: 0;
+      width: 100vw;
+      margin-left: 0;
+      border: 0;
+    }
   }
 
   &_image {
@@ -27,5 +64,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     height: 100%;
+
+    @include tablet-md {
+      width: 100%;
+      height: unset;
+    }
   }
 }

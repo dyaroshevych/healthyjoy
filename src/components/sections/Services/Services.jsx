@@ -35,7 +35,7 @@ const headings = [
 ];
 
 const SLIDER_SETTINGS = {
-  slidesToShow: 2,
+  slidesToShow: window.innerWidth <= 640 ? 1 : 2,
   dots: true,
   customPaging: function (i) {
     return (
@@ -56,7 +56,7 @@ const PRICING = [
     heading: "Масаж обличчя",
     img: [popup_1_1Jpg, popup_1_2Jpg, popup_1_3Jpg],
     text: [
-      ["Гуа-ша", "800 грн"],
+      ['"Гуа-ша"', "800 грн"],
       ["Ліфтинговий “Магія молодості”", "900 грн"],
       ["Скульптурний “Face building”", "900 грн"],
       ["Зони навколо очей “Чарівні очі”", "700 грн"],
@@ -76,7 +76,7 @@ const PRICING = [
     heading: "Масаж спини",
     img: [popup_3_1Jpg, popup_3_2Jpg, popup_3_3Jpg],
     text: [
-      ["Гуа-ша", "850 грн"],
+      ['"Гуа-ша"', "850 грн"],
       ["“Ци-сує-тун” (застосування банок)", "950 грн"],
     ],
   },
@@ -94,7 +94,7 @@ const ServicesPopupSlider = ({ initialSlide }) => (
     className="Services_popupSlider"
   >
     {PRICING.map(({ heading, img, text }) => (
-      <div>
+      <div key={heading}>
         <div className="Services_popupSlide">
           <div className="Services_popupSlideImages">
             <div>
@@ -113,7 +113,7 @@ const ServicesPopupSlider = ({ initialSlide }) => (
             <h4>{heading}</h4>
             <ul className="Services_popupSlideList">
               {text.map((text_item) => (
-                <li className="Services_popupSlideListItem">
+                <li key={text_item[0]} className="Services_popupSlideListItem">
                   <h5>{text_item[0]}</h5>
                   <h5>{text_item[1]}</h5>
                 </li>

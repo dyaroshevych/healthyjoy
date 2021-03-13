@@ -23,23 +23,25 @@ const ContactInfo = () => (
         </ul>
 
         <ul className="ContactInfo_list">
-          <li className="ContactInfo_item">Ми у соціальних мережах:</li>
+          <li className="ContactInfo_item ContactInfo_desktopItem">
+            Ми у соціальних мережах:
+          </li>
           <li className="ContactInfo_item">
             <a
               href="https://instagram.com/healthy.joy.lviv?igshid=1llab56v6m85s"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Instagram <img src={instagramSvg} alt="Instagram" />
+              <p>Instagram</p> <img src={instagramSvg} alt="Instagram" />
             </a>
           </li>
           <li className="ContactInfo_item">
             <a href="facebook.com">
-              Facebook <img src={facebookSvg} alt="Facebook" />
+              <p>Facebook</p> <img src={facebookSvg} alt="Facebook" />
             </a>
           </li>
         </ul>
-        <Link to="navigation" smooth>
+        <Link className="ContactInfo_linkToTopContainer" to="navigation" smooth>
           <img className="ContactInfo_linkToTop" src={arrowSvg} alt="page up" />
         </Link>
       </div>

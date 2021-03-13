@@ -1,17 +1,32 @@
+@import "../../../index.scss";
+
 .Services {
   &_content {
     margin-top: 80px;
+
+    @include mobile-md {
+      margin-top: 40px;
+    }
   }
 
   &_slide {
     cursor: pointer;
     margin: 0 15px;
+
+    @include mobile-lg {
+      margin: 0;
+    }
   }
+
   &_slideImageContainer {
     overflow: hidden;
     width: 400px;
     height: 400px;
     margin: auto;
+
+    @include tablet-lg {
+      width: 100%;
+    }
   }
 
   &_slideImage {
@@ -38,8 +53,39 @@
     height: 300px;
     overflow: hidden;
 
+    @include desktop-md {
+      width: 250px;
+      height: 250px;
+    }
+
+    @include desktop-sm {
+      width: 200px;
+      height: 200px;
+    }
+
+    @include mobile-lg {
+      width: 150px;
+      height: 150px;
+    }
+
+    @include mobile-md {
+      display: none;
+    }
+
     &--tall {
       height: 600px;
+
+      @include desktop-md {
+        height: 500px;
+      }
+
+      @include desktop-sm {
+        height: 400px;
+      }
+
+      @include tablet-lg {
+        display: none;
+      }
     }
 
     img {
@@ -55,21 +101,38 @@
   &_slider {
     width: 860px;
 
+    @include tablet-lg {
+      width: 95%;
+    }
+
     .slick-prev,
     .slick-next {
       bottom: -72px;
+
+      @include tablet-lg {
+        bottom: -35px;
+      }
     }
 
     .slick-prev {
-      left: 25px;
+      left: 15px;
     }
 
     .slick-next {
-      right: 25px;
+      right: 15px;
     }
 
     .slick-dots {
       bottom: -75px;
+      text-align: center;
+
+      @include mobile-lg {
+        bottom: -85px;
+      }
+
+      @include mobile-sm {
+        bottom: -110px;
+      }
     }
   }
 
@@ -84,10 +147,14 @@
   &_popupSlider {
     border-top: 50px solid #dec7ab;
 
+    & > div > div > div > div > div:focus {
+      outline: none;
+    }
+
     .slick-prev,
     .slick-next {
-      top: -50px;
-      padding: 25px 55px;
+      top: -95px;
+      padding: 70px 25px;
       background-color: #efece9;
 
       &::before {
@@ -99,11 +166,11 @@
     }
 
     .slick-prev {
-      left: 50px;
+      left: 85px;
     }
 
     .slick-next {
-      left: 160px;
+      left: 225px;
     }
   }
 
@@ -120,6 +187,20 @@
     padding-left: 95px;
     padding-right: 10px;
     padding-top: 32px;
+
+    @include desktop-md {
+      padding-left: 50px;
+    }
+
+    @include mobile-lg {
+      padding-left: 20px;
+      padding-top: 15px;
+    }
+
+    @include mobile-md {
+      padding-left: 10px;
+      padding-bottom: 20px;
+    }
   }
 
   &_popupSlideList {
@@ -137,6 +218,8 @@
 
     h5:last-of-type {
       font-weight: 500;
+      min-width: fit-content;
+      margin-left: 15px;
     }
   }
 }

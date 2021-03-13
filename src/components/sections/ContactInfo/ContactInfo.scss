@@ -1,3 +1,5 @@
+@import "../../../index.scss";
+
 .ContactInfo {
   padding-bottom: 135px;
 
@@ -6,11 +8,30 @@
     display: flex;
     justify-content: space-between;
     margin-top: 65px;
+
+    @include mobile-md {
+      display: block;
+    }
+  }
+
+  &_list:nth-of-type(2) {
+    @include mobile-md {
+      display: flex;
+      margin-top: 20px;
+
+      .ContactInfo_item:not(:last-of-type) {
+        margin-right: 30px;
+      }
+    }
   }
 
   &_item {
     &:not(:last-child) {
       margin-bottom: 45px;
+
+      @include desktop-sm {
+        margin-bottom: 20px;
+      }
     }
 
     a {
@@ -21,18 +42,50 @@
       &:hover {
         color: #c3423f;
       }
+
+      p {
+        @include mobile-lg {
+          display: none;
+        }
+
+        @include mobile-md {
+          display: block;
+        }
+      }
     }
 
     img {
       height: 25px;
       margin-left: 120px;
+
+      @include tablet-md {
+        margin-left: 20px;
+      }
+
+      @include mobile-lg {
+        margin-left: 0;
+      }
+
+      @include mobile-md {
+        margin-left: 10px;
+      }
     }
   }
 
-  &_linkToTop {
+  &_desktopItem {
+    @include tablet-md {
+      display: none;
+    }
+  }
+
+  &_linkToTopContainer {
     position: absolute;
     bottom: 0;
-    right: 25px;
+    right: -15px;
     height: 75px;
+
+    @include tablet-md {
+      display: none;
+    }
   }
 }

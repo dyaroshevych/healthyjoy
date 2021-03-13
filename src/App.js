@@ -21,7 +21,6 @@ const App = () => (
       <Navigation />
       <Header />
       <About />
-      <Advantages />
       <Services />
       <Subscription />
       <ContactForm />

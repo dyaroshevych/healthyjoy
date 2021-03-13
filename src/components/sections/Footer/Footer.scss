@@ -1,11 +1,48 @@
+@import "../../../index.scss";
+
 .Footer {
   position: relative;
   background-color: #dec7ab;
   padding: 12px 0;
 
+  @include tablet-md {
+    padding-bottom: 60px;
+  }
+
   &_content {
     display: flex;
     justify-content: space-between;
+
+    @include tablet-md {
+      display: block;
+
+      & > div:first-of-type {
+        margin-bottom: 10px;
+      }
+    }
+
+    @include mobile-lg {
+      display: flex;
+
+      & > div:first-of-type {
+        margin-bottom: 0;
+      }
+
+      & > div:nth-of-type(2) .Footer_link {
+        width: 160px;
+      }
+    }
+
+    @include mobile-md {
+      & > div:nth-of-type(2) .Footer_link {
+        width: 145px;
+      }
+    }
+
+    @include mobile-sm {
+      display: block;
+      text-align: center;
+    }
 
     img {
       width: 24px;
@@ -17,6 +54,24 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    @include tablet-md {
+      left: unset;
+      right: 25px;
+      transform: translateY(-50%);
+    }
+
+    @include mobile-lg {
+      top: 120px;
+      right: unset;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: fit-content;
+    }
+
+    @include mobile-sm {
+      top: 170px;
+    }
   }
 
   &_link {
@@ -24,6 +79,18 @@
     justify-content: space-between;
     align-items: center;
     width: 230px;
+
+    @include tablet-lg {
+      width: 200px;
+    }
+
+    @include mobile-md {
+      width: 180px;
+    }
+
+    @include mobile-sm {
+      margin: 0 auto;
+    }
 
     color: #211a1e;
     transition: color 0.25s ease;
@@ -33,7 +100,17 @@
     }
   }
 
-  h5:not(:last-of-type) {
-    margin-bottom: 3px;
+  h5 {
+    &:not(:last-of-type) {
+      margin-bottom: 3px;
+    }
+
+    @include tablet-lg {
+      font-size: 1.8rem;
+    }
+
+    @include mobile-md {
+      font-size: 1.6rem;
+    }
   }
 }
