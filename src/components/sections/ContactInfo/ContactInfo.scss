@@ -1,7 +1,11 @@
 @import "../../../index.scss";
 
 .ContactInfo {
-  padding-bottom: 135px;
+  padding-bottom: 100px;
+
+  @include desktop-sm {
+    padding-bottom: 50px;
+  }
 
   &_content {
     position: relative;
