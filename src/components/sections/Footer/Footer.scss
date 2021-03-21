@@ -78,14 +78,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 230px;
-
-    @include tablet-lg {
-      width: 200px;
-    }
+    width: 190px;
 
     @include mobile-md {
-      width: 180px;
+      width: 160px;
     }
 
     @include mobile-sm {
@@ -101,16 +97,14 @@
   }
 
   h5 {
+    font-size: 1.6rem;
+
     &:not(:last-of-type) {
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
 
-    @include tablet-lg {
-      font-size: 1.8rem;
-    }
-
-    @include mobile-md {
-      font-size: 1.6rem;
+    @include mobile-lg {
+      font-size: 1.4rem;
     }
   }
 }

@@ -5,11 +5,24 @@ import Spinner from "./components/UI/Spinner/Spinner";
 
 const App = lazy(() => import("./App"));
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Suspense fallback={<Spinner />}>
-      <App />
-    </Suspense>
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+const rootElement = document.getElementById("root");
+
+if (rootElement.hasChildNodes()) {
+  ReactDOM.hydrate(
+    <React.StrictMode>
+      <Suspense fallback={<Spinner />}>
+        <App />
+      </Suspense>
+    </React.StrictMode>,
+    rootElement
+  );
+} else {
+  ReactDOM.render(
+    <React.StrictMode>
+      <Suspense fallback={<Spinner />}>
+        <App />
+      </Suspense>
+    </React.StrictMode>,
+    rootElement
+  );
+}
