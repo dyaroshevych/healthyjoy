@@ -34,6 +34,10 @@
     @include mobile-lg {
       max-height: 350px;
     }
+
+    @include mobile-md {
+      max-height: 450px;
+    }
   }
 
   &_button {

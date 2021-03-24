@@ -11,6 +11,12 @@
     }
   }
 
+  h2 {
+    @include mobile-lg {
+      margin-left: 25px;
+    }
+  }
+
   &_content {
     margin-top: 30px;
   }

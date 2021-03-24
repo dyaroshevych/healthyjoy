@@ -6,7 +6,7 @@ import "./Header.scss";
 
 const Header = () => (
   <div className="Header">
-    <video className="Header_video" autoPlay loop muted>
+    <video className="Header_video" autoPlay loop muted preload="none">
       <source src={headerVideoMp4} type="video/mp4" />
     </video>
   </div>
